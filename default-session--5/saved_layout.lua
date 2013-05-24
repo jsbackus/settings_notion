@@ -6,7 +6,7 @@ return {
         ["managed"] = {
             [1] = {
                 ["type"] = "WGroupWS",
-                ["name"] = "WGroupWS",
+                ["name"] = "main",
                 ["geom"] = {
                     ["y"] = 0,
                     ["x"] = 0,
@@ -68,6 +68,116 @@ return {
                 ["level"] = 0,
             },
             [2] = {
+                ["type"] = "WGroupWS",
+                ["name"] = "fs",
+                ["hidden"] = true,
+                ["geom"] = {
+                    ["y"] = 0,
+                    ["x"] = 0,
+                    ["w"] = 1920,
+                    ["h"] = 1080,
+                },
+                ["sizepolicy"] = "full",
+                ["managed"] = {
+                    [1] = {
+                        ["type"] = "WTiling",
+                        ["name"] = "WTiling<1>",
+                        ["bottom"] = true,
+                        ["level"] = 0,
+                        ["sizepolicy"] = "full",
+                        ["geom"] = {
+                            ["y"] = 0,
+                            ["x"] = 0,
+                            ["w"] = 1920,
+                            ["h"] = 1080,
+                        },
+                        ["split_tree"] = {
+                            ["tls"] = 1064,
+                            ["tl"] = {
+                                ["regparams"] = {
+                                    ["mode"] = 1,
+                                    ["type"] = "WFrame",
+                                    ["name"] = "Notion WFrame<2>",
+                                    ["managed"] = {
+                                    },
+                                },
+                                ["type"] = "WSplitRegion",
+                            },
+                            ["dir"] = "vertical",
+                            ["brs"] = 16,
+                            ["br"] = {
+                                ["type"] = "WSplitST",
+                            },
+                            ["type"] = "WSplitSplit",
+                        },
+                    },
+                },
+                ["level"] = 0,
+            },
+            [3] = {
+                ["type"] = "WGroupWS",
+                ["name"] = "dev",
+                ["hidden"] = true,
+                ["geom"] = {
+                    ["y"] = 0,
+                    ["x"] = 0,
+                    ["w"] = 1920,
+                    ["h"] = 1080,
+                },
+                ["sizepolicy"] = "full",
+                ["managed"] = {
+                    [1] = {
+                        ["type"] = "WTiling",
+                        ["name"] = "WTiling<2>",
+                        ["bottom"] = true,
+                        ["level"] = 0,
+                        ["sizepolicy"] = "full",
+                        ["geom"] = {
+                            ["y"] = 0,
+                            ["x"] = 0,
+                            ["w"] = 1920,
+                            ["h"] = 1080,
+                        },
+                        ["split_tree"] = {
+                            ["tls"] = 1064,
+                            ["tl"] = {
+                                ["tls"] = 960,
+                                ["tl"] = {
+                                    ["regparams"] = {
+                                        ["mode"] = 1,
+                                        ["type"] = "WFrame",
+                                        ["name"] = "Notion WFrame<4>",
+                                        ["managed"] = {
+                                        },
+                                    },
+                                    ["type"] = "WSplitRegion",
+                                },
+                                ["dir"] = "horizontal",
+                                ["brs"] = 960,
+                                ["br"] = {
+                                    ["regparams"] = {
+                                        ["mode"] = 1,
+                                        ["type"] = "WFrame",
+                                        ["name"] = "Notion WFrame<5>",
+                                        ["managed"] = {
+                                        },
+                                    },
+                                    ["type"] = "WSplitRegion",
+                                },
+                                ["type"] = "WSplitSplit",
+                            },
+                            ["dir"] = "vertical",
+                            ["brs"] = 16,
+                            ["br"] = {
+                                ["type"] = "WSplitST",
+                            },
+                            ["type"] = "WSplitSplit",
+                        },
+                    },
+                },
+                ["level"] = 0,
+            },
+            [4] = {
                 ["type"] = "WGroupWS",
                 ["sizepolicy"] = "full",
                 ["managed"] = {

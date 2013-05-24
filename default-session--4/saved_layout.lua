@@ -36,7 +36,7 @@ return {
                                     ["regparams"] = {
                                         ["mode"] = 1,
                                         ["type"] = "WFrame",
-                                        ["name"] = "Notion WFrame",
+                                        ["name"] = "Notion WFrame<1>",
                                         ["managed"] = {
                                         },
                                     },
@@ -48,7 +48,7 @@ return {
                                     ["regparams"] = {
                                         ["mode"] = 1,
                                         ["type"] = "WFrame",
-                                        ["name"] = "Notion WFrame<1>",
+                                        ["name"] = "Notion WFrame",
                                         ["managed"] = {
                                         },
                                     },
