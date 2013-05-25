@@ -42,7 +42,8 @@ mod_statusbar.create{
     --template="[ %date || load: %05load_1min || mail: %02mail_new/%02mail_total ] %filler%systray",
 -- JSB
     -- Note: requires statusbar_workspace.lua and maybe statusbar_fname.lua. Maybe in notion/contrib?
-    template="[ %date || load: %load ] %workspace_num_name_pager %filler%systray",
+--    template="[ %date || load: %load ] %workspace_num_name_pager %filler%systray",
+    template="[ %date || load: %load || %mem_free M ] %workspace_num_name_pager %filler%systray",
 }
 
 
