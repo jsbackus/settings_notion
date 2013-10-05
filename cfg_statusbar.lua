@@ -43,7 +43,8 @@ mod_statusbar.create{
 -- JSB
     -- Note: requires statusbar_workspace.lua and maybe statusbar_fname.lua. Maybe in notion/contrib?
 --    template="[ %date || load: %load ] %workspace_num_name_pager %filler%systray",
-    template="[ %date || load: %load || %mem_hfree M ] %workspace_num_name_pager %filler%systray",
+--    template="[ %date || load: %load || %mem_hfree M ] %workspace_num_name_pager %filler%systray",
+    template="[ %date || load: %load || %mem_hfree M ] %workspace_num_name_pager %filler [ %mpd ] %systray",
 }
 
 
@@ -88,6 +89,33 @@ mod_statusbar.launch_statusd{
         --update_interval=60*1000,
         --mbox=os.getenv("MAIL"),
         --files={},
+    },
+
+    -- Configure MPD monitor
+    mpd={
+        -- how long to go to sleep when we can't talk to mpd so we don't spam
+    	-- the system with connection attempts every half-second
+	    --retry_interval = 60*1000,           -- 1m
+	    retry_interval = 5*60*1000,           -- 5m
+
+    	-- mpd server info (localhost:6600 are mpd defaults)
+    	address = "localhost",
+    	port    = 6600,
+
+       -- display template
+       -- ---
+       -- can use the following:
+       --   track metadata: %artist, %title, %num, %album, %year, %len
+       --   conditional metadata: %artist_or_album
+       --   current track position: %pos
+       --   escape for the percent character: %%
+       --
+       --   %artist_or_album will display the artist if any, otherwise it will
+       --   display the album name.  I find this useful for Broadway recordings.
+
+       -- a default template
+       -- template = "%artist - %num - %title (%pos / %len)"
+       template = "t%num - %pos / %len"
     },
 }
 
