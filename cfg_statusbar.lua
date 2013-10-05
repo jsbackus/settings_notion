@@ -115,7 +115,12 @@ mod_statusbar.launch_statusd{
 
        -- a default template
        -- template = "%artist - %num - %title (%pos / %len)"
-       template = "t%num - %pos / %len"
+
+       -- "minimalist" template
+       -- template = "t%num - %pos / %len"
+       
+       -- "complete" template
+       template = "(%artist) %album < %num > %title (%pos / %len)"
     },
 }
 
