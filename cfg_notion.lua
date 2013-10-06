@@ -83,7 +83,7 @@ dopath("cfg_defaults")
 --dopath("mod_statusbar")
 --dopath("mod_dock")
 --dopath("mod_sp")
-dopath("mod_xrandr")
+--dopath("mod_xrandr")
 
 
 --
