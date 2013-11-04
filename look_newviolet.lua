@@ -22,15 +22,18 @@ de.defstyle("*", {
     border_style = "elevated",
     border_sides = "tb",
     
---    font = "-*-helvetica-medium-r-normal-*-14-*-*-*-*-*-*-*",
-    font = "fixed",
+    font = "-*-helvetica-medium-r-normal-*-14-*-*-*-*-*-*-*",
+--    font = "-*-freesans-medium-r-normal-*-14-*-*-*-*-*-*-*",
+--    font = "fixed",
     text_align = "center",
 })
 
 
 de.defstyle("tab", {
 --    font = "-*-helvetica-medium-r-normal-*-12-*-*-*-*-*-*-*",
-    font = "fixed",
+    font = "-*-helvetica-medium-r-normal-*-11-*-*-*-*-*-*-*",
+--    font = "-*-FreeSans-medium-r-normal-*-12-*-*-*-*-*-*-*",
+--    font = "fixed",
     
     de.substyle("active-selected", {
         highlight_colour = "#aaaacc",
