@@ -55,6 +55,18 @@ ioncore.set{
     
     -- Display notification tooltips for activity on hidden workspace.
     --screen_notify=true,
+    
+    -- Automatically save layout on restart and exit.
+    --autosave_layout=true,
+    
+    -- Mouse focus mode; set to "sloppy" if you want the focus to follow the 
+    -- mouse, and to "disabled" otherwise.
+    --mousefocus="sloppy",
+
+    -- Controls Notion's reaction to stacking requests sent by clients. Set to
+    -- "ignore" to ignore these requests, and to "activate" to set the activity
+    -- flag on a window that requests to be stacked "Above".
+    --window_stacking_request="ignore",
 }
 
 
@@ -83,8 +95,8 @@ dopath("cfg_defaults")
 --dopath("mod_statusbar")
 --dopath("mod_dock")
 --dopath("mod_sp")
+--dopath("mod_notionflux")
 --dopath("mod_xrandr")
-
 
 
 --
@@ -102,17 +114,3 @@ dopath("cfg_defaults")
 --    kpress(META.."M", "mod_menu.menu(_, _sub, 'ctxmenu')"),
 --})
 
---
--- XRandR and xinerama
---
-
--- refresh xinerama on screen layout updates
-function screenlayoutupdated()
-    mod_xinerama.refresh()
-end
-
-randr_screen_change_notify_hook = ioncore.get_hook('randr_screen_change_notify')
-
-if randr_screen_change_notify_hook ~= nil then
-    randr_screen_change_notify_hook:add(screenlayoutupdated)
-end
