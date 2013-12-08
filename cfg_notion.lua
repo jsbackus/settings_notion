@@ -114,3 +114,7 @@ dopath("cfg_defaults")
 --    kpress(META.."M", "mod_menu.menu(_, _sub, 'ctxmenu')"),
 --})
 
+-- Adding support for stalonetray, taken from:
+-- http://stalonetray.sourceforge.net/wmhints.html#ion3
+defwinprop {class="stalonetray", statusbar="dock"}
+-- end support for stalonetray
