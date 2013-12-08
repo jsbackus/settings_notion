@@ -55,11 +55,17 @@ defbindings("WScreen", {
 
     bdoc("Go to n:th screen on multihead setup."),
     kpress(META.."Shift+1", "ioncore.goto_nth_screen(0)"),
+    kpress(META.."Q", "ioncore.goto_nth_screen(0)"),
     kpress(META.."Shift+2", "ioncore.goto_nth_screen(1)"),
+    kpress(META.."W", "ioncore.goto_nth_screen(1)"),
+    kpress(META.."Shift+3", "ioncore.goto_nth_screen(2)"),
+    kpress(META.."E", "ioncore.goto_nth_screen(2)"),
     
     bdoc("Go to next/previous screen on multihead setup."),
     kpress(META.."Shift+comma", "ioncore.goto_prev_screen()"),
-    kpress(META.."Shift+period", "ioncore.goto_next_screen()"),
+    kpress(META.."I", "ioncore.goto_prev_screen()"),
+    kpress(META.."O", "ioncore.goto_next_screen()"),
+    kpress(META.."grave", "ioncore.goto_next_screen()"),
     
     bdoc("Create a new workspace of chosen default type."),
     kpress(META.."F9", "ioncore.create_ws(_)"),
@@ -98,11 +104,11 @@ defbindings("WScreen", {
 -- These bindings affect client windows directly.
 
 defbindings("WClientWin", {
-    bdoc("Nudge the client window. This might help with some "..
-         "programs' resizing problems."),
-    kpress_wait(META.."L", "WClientWin.nudge(_)"),
-    
     submap(META.."K", {
+       bdoc("Nudge the client window. This might help with some "..
+         "programs' resizing problems."),
+       kpress_wait(META.."L", "WClientWin.nudge(_)"),
+
        bdoc("Kill client owning the client window."),
        kpress("C", "WClientWin.kill(_)"),
        
@@ -136,6 +142,9 @@ defbindings("WMPlex.toplevel", {
     bdoc("Toggle tag of current object."),
     kpress(META.."T", "WRegion.set_tagged(_sub, 'toggle')", "_sub:non-nil"),
 
+    bdoc("Lock screen"),
+    kpress(META.."L", "notioncore.exec_on(_, notioncore.lookup_script('notion-lock'))"),
+    
     bdoc("Query for manual page to be displayed."),
     kpress(ALTMETA.."F1", "mod_query.query_man(_, ':man')"),
 
@@ -216,6 +225,9 @@ defbindings("WFrame", {
     mdrag("Button1@tab", "WFrame.p_tabdrag(_)"),
     mdrag("Button2@tab", "WFrame.p_tabdrag(_)"),
            
+    bdoc("Switch to next/previous object within the frame."),
+    mclick(META.."Button4", "WFrame.switch_next(_)"), 
+    mclick(META.."Button5", "WFrame.switch_prev(_)"),
 })
 
 -- Frames for transient windows ignore this bindmap
@@ -330,7 +342,8 @@ defbindings("WMoveresMode", {
 defmenu("mainmenu", {
     menuentry("Run...",         "mod_query.query_exec(_)"),
     menuentry("Terminal",       "mod_query.exec_on_merr(_, XTERM or 'xterm')"),
-    menuentry("Lock screen",    "mod_query.exec_on_merr(_, 'xlock')"),
+    menuentry("Lock screen",    
+        "notioncore.exec_on(_, notioncore.lookup_script('notion-lock'))"),
     menuentry("Help",           "mod_query.query_man(_)"),
     menuentry("About Notion",      "mod_query.show_about_ion(_)"),
     submenu("Styles",           "stylemenu"),
