@@ -44,7 +44,11 @@ mod_statusbar.create{
     -- Note: requires statusbar_workspace.lua and maybe statusbar_fname.lua. Maybe in notion/contrib?
 --    template="[ %date || load: %load ] %workspace_num_name_pager %filler%systray",
 --    template="[ %date || load: %load || %mem_hfree M ] %workspace_num_name_pager %filler%systray",
-    template="[ %date || load: %load || %mem_hfree M ] %workspace_num_name_pager %filler [ %mpd ] %systray",
+--    template="[ %date || load: %load || %mem_hfree M ] %workspace_num_name_pager %filler [ %mpd ] %systray",
+
+    template="[ %date || load: %load || %mem_hfree M ] %wsname_fullall %filler [ %mpd ] %systray",
+
+--    template="[ %date || load: %load || %mem_hfree M ] %workspace_num_name_pager %filler [ %mpd ] %systray_dock",
 }
 
 
