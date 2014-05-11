@@ -118,3 +118,5 @@ dopath("cfg_defaults")
 -- http://stalonetray.sourceforge.net/wmhints.html#ion3
 defwinprop {class="stalonetray", statusbar="dock"}
 -- end support for stalonetray
+
+dopath("mpd.lua")
