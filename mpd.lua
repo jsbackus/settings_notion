@@ -161,12 +161,12 @@ defbindings("WScreen", {
 --  kpress("KP_7", "MusicPD.toggle_repeat()"),
 --  kpress("KP_9", "MusicPD.toggle_random()")
 
-  kpress(META.."Shift+N", "MusicPD.next()"),
-  kpress(META.."Shift+B", "MusicPD.previous()"),
-  kpress(META.."Shift+D", "MusicPD.volume_down()"),
-  kpress(META.."Shift+U", "MusicPD.volume_up()"),
-  kpress(META.."Shift+P", "MusicPD.toggle_play()"),
-  kpress(META.."Shift+R", "MusicPD.toggle_repeat()"),
-  kpress(META.."Shift+S", "MusicPD.toggle_random()")
+  kpress(ALTMETA.."N", "MusicPD.next()"),
+  kpress(ALTMETA.."B", "MusicPD.previous()"),
+  kpress(ALTMETA.."D", "MusicPD.volume_down()"),
+  kpress(ALTMETA.."U", "MusicPD.volume_up()"),
+  kpress(ALTMETA.."P", "MusicPD.toggle_play()"),
+  kpress(ALTMETA.."R", "MusicPD.toggle_repeat()"),
+  kpress(ALTMETA.."S", "MusicPD.toggle_random()")
 })
 

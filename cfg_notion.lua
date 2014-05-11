@@ -19,9 +19,11 @@
 --META="Mod1+"
 --ALTMETA=""
 META="Mod4+"
+ALTMETA="Mod4+Shift+"
 
 -- Terminal emulator
 --XTERM="xterm"
+WEBBROWSER="/usr/bin/firefox"
 
 -- Some basic settings
 ioncore.set{

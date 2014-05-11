@@ -71,7 +71,8 @@ defbindings("WScreen", {
     kpress(META.."F9", "ioncore.create_ws(_)"),
     
     bdoc("Display the main menu."),
-    kpress(ALTMETA.."F12", "mod_query.query_menu(_, _sub, 'mainmenu', 'Main menu:')"),
+    kpress(META.."F12", "mod_query.query_menu(_, _sub, 'mainmenu', 'Main menu:')"),
+--    kpress(ALTMETA.."F12", "mod_query.query_menu(_, _sub, 'mainmenu', 'Main menu:')"),
     --kpress(ALTMETA.."F12", "mod_menu.menu(_, _sub, 'mainmenu', {big=true})"),
     mpress("Button3", "mod_menu.pmenu(_, _sub, 'mainmenu')"),
     
@@ -152,7 +153,7 @@ defbindings("WMPlex.toplevel", {
     kpress(META.."F1", "ioncore.exec_on(_, ':man notion')"),
 
     bdoc("Run a terminal emulator."),
-    kpress(ALTMETA.."F2", "mod_query.exec_on_merr(_, XTERM or 'xterm')"),
+    kpress(META.."F2", "mod_query.exec_on_merr(_, XTERM or 'xterm')"),
     
     bdoc("Query for command line to execute."),
     kpress(ALTMETA.."F3", "mod_query.query_exec(_)"),
@@ -163,13 +164,16 @@ defbindings("WMPlex.toplevel", {
     bdoc("Query for host to connect to with SSH."),
     kpress(ALTMETA.."F4", "mod_query.query_ssh(_, ':ssh')"),
 
-    bdoc("Query for file to edit."),
-    kpress(ALTMETA.."F5", 
-           "mod_query.query_editfile(_, 'run-mailcap --action=edit')"),
+    bdoc("Open web browser."),
+    kpress(META.."F5", "mod_query.exec_on_merr(_, WEBBROWSER or 'firefox')"),
 
-    bdoc("Query for file to view."),
-    kpress(ALTMETA.."F6", 
-           "mod_query.query_runfile(_, 'run-mailcap --action=view')"),
+--    bdoc("Query for file to edit."),
+--    kpress(ALTMETA.."F5", 
+--           "mod_query.query_editfile(_, 'run-mailcap --action=edit')"),
+
+--    bdoc("Query for file to view."),
+--    kpress(ALTMETA.."F6", 
+--           "mod_query.query_runfile(_, 'run-mailcap --action=view')"),
 
     bdoc("Query for workspace to go to or create a new one."),
     kpress(ALTMETA.."F9", "mod_query.query_workspace(_)"),

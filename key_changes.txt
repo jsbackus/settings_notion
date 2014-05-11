@@ -1,0 +1,17 @@
+META = Mod4
+ALTMETA = Mod4+Shift
+
+META+F2 = Xterm
+META+F5 = Firefox
+META+F12 = Menu
+
+ALTMETA+N = MPD Next
+ALTMETA+B = MPD Previous
+ALTMETA+D = MPD Volume Down
+ALTMETA+U = MPD Volume Up
+ALTMETA+P = MPD Toggle Play/Pause
+ALTMETA+R = MPD Toggle Repeat
+ALTMETA+S = MPD Toggle Next
+
+
+
