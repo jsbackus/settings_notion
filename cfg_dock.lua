@@ -54,8 +54,18 @@ end
 
 -- Add support for stalonetray. Taken from:
 -- http://stalonetray.sourceforge.net/wmhints.html#ion3
-defwinprop{class="stalonetray",instance="stalonetray",target="*dock*"}
-defwinprop{instance="stalonetray",target="*dock*"}
-defwinprop{class="stalonetray",target="*dock*"}
-defwinprop{is_dockapp=true,target="*dock*"}
+--defwinprop{class="stalonetray",instance="stalonetray",target="*dock*"}
+--defwinprop{instance="stalonetray",target="*dock*"}
+--defwinprop{class="stalonetray",target="*dock*"}
+--defwinprop{is_dockapp=true,target="*dock*"}
+
+-- https://wiki.archlinux.org/index.php/stalonetray
+--defwinprop{class="stalonetray",instance="stalonetray",statusbar="systray_stalone"}
+--defwinprop{instance="stalonetray",statusbar="systray_stalone"}
+--defwinprop{class="stalonetray",statusbar="systray_stalone"}
 -- End support for stalonetray
+
+defwinprop{
+  class = "stalonetray",
+  statusbar = "systray",
+}
