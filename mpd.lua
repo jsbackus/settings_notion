@@ -167,6 +167,9 @@ defbindings("WScreen", {
   kpress(ALTMETA.."U", "MusicPD.volume_up()"),
   kpress(ALTMETA.."P", "MusicPD.toggle_play()"),
   kpress(ALTMETA.."R", "MusicPD.toggle_repeat()"),
-  kpress(ALTMETA.."S", "MusicPD.toggle_random()")
+  kpress(ALTMETA.."S", "MusicPD.toggle_random()"),
+
+  kpress("XF86AudioLowerVolume", "MusicPD.volume_down()"),
+  kpress("XF86AudioRaiseVolume", "MusicPD.volume_up()")
 })
 
